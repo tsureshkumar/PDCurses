@@ -141,7 +141,7 @@ int _get_displaynum(void)
 
     if (displays > 1)
     {
-        SDL_GetGlobalMouseState(&xpos, &ypos);
+        SDL_GetMouseState(&xpos, &ypos);
 
         for (i = 0; i < displays; i++)
         {
@@ -167,7 +167,7 @@ int PDC_scr_open(void)
 
     if (pdc_own_window)
     {
-        if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER|SDL_INIT_EVENTS) < 0)
+        if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) < 0)
         {
             fprintf(stderr, "Could not start SDL: %s\n", SDL_GetError());
             return ERR;

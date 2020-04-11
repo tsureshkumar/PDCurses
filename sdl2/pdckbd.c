@@ -1,5 +1,6 @@
 /* PDCurses */
 
+#include <stdlib.h>
 #include "pdcsdl.h"
 
 #include <ctype.h>
